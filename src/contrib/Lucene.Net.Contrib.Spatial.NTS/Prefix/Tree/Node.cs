@@ -63,7 +63,7 @@ namespace Lucene.Net.Spatial.Prefix.Tree
 		public virtual void Reset(string newToken)
 		{
 			Debug.Assert(GetLevel() != 0);
-			shapeRel = SpatialRelation.NOT_SET;
+			shapeRel = SpatialRelation.None;
 			SetToken(newToken);
 			b_fixLeaf();
 		}
@@ -83,13 +83,13 @@ namespace Lucene.Net.Spatial.Prefix.Tree
 
 		public bool IsLeaf()
 		{
-			return shapeRel == SpatialRelation.WITHIN;
+			return shapeRel == SpatialRelation.Within;
 		}
 
 		public void SetLeaf()
 		{
 			Debug.Assert(GetLevel() != 0);
-			shapeRel = SpatialRelation.WITHIN;
+			shapeRel = SpatialRelation.Within;
 		}
 
 		/*
