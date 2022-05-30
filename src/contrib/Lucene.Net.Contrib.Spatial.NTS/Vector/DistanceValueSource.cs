@@ -61,7 +61,7 @@ namespace Lucene.Net.Spatial.Vector
 				validY = FieldCache_Fields.DEFAULT.GetDocsWithField(reader, enclosingInstance.strategy.GetFieldNameY(), state);
 
                 from = enclosingInstance.from;
-                calculator = enclosingInstance.strategy.GetSpatialContext().DistCalc;
+                calculator = enclosingInstance.strategy.GetSpatialContext().DistanceCalculator;
                 nullValue = (enclosingInstance.strategy.GetSpatialContext().IsGeo ? 180 : double.MaxValue);
 			}
 
