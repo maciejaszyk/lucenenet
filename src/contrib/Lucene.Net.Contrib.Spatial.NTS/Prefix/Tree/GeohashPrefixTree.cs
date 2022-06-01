@@ -17,9 +17,9 @@
 
 using System;
 using System.Collections.Generic;
-using Spatial4n.Core.Context;
-using Spatial4n.Core.Shapes;
-using Spatial4n.Core.Util;
+using Spatial4n.Context;
+using Spatial4n.Shapes;
+using Spatial4n.Util;
 
 namespace Lucene.Net.Spatial.Prefix.Tree
 {
@@ -64,7 +64,7 @@ namespace Lucene.Net.Spatial.Prefix.Tree
         /// <returns></returns>
         public static int GetMaxLevelsPossible()
         {
-            return GeohashUtils.MAX_PRECISION;
+            return GeohashUtils.MaxPrecision;
         }
 
         public override int GetLevelForDistance(double dist)

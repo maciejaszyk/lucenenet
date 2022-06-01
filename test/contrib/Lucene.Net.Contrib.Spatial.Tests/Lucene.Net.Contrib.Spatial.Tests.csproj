@@ -36,7 +36,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Spatial4n\Spatial4n.Core.NTS\Spatial4n.Core.NTS.csproj" />
     <ProjectReference Include="..\..\..\src\Lucene.Net\Lucene.Net.csproj" />
     <ProjectReference Include="..\..\..\src\contrib\Lucene.Net.Contrib.Spatial.NTS\Lucene.Net.Contrib.Spatial.NTS.csproj" />
     <ProjectReference Include="..\..\Lucene.Net.Test\Lucene.Net.Test.csproj" />

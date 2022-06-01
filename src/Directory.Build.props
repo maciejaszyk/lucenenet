@@ -1,7 +1,7 @@
 <Project>
   <PropertyGroup>
-    <Version>3.0.60001</Version>
-    <FileVersion>3.0.60001</FileVersion>
+    <Version>3.0.60002</Version>
+    <FileVersion>3.0.60002</FileVersion>
     <LangVersion>latest</LangVersion>
     <DebugType>embedded</DebugType>
 

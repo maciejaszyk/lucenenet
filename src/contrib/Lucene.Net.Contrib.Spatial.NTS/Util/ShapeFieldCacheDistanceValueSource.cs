@@ -19,9 +19,9 @@ using System;
 using Lucene.Net.Index;
 using Lucene.Net.Search.Function;
 using Lucene.Net.Store;
-using Spatial4n.Core.Context;
-using Spatial4n.Core.Distance;
-using Spatial4n.Core.Shapes;
+using Spatial4n.Context;
+using Spatial4n.Distance;
+using Spatial4n.Shapes;
 
 namespace Lucene.Net.Spatial.Util
 {
@@ -55,7 +55,7 @@ namespace Lucene.Net.Spatial.Util
 				this.enclosingInstance = enclosingInstance;
 				
                 from = enclosingInstance.from;
-			    calculator = enclosingInstance.ctx.DistCalc;
+			    calculator = enclosingInstance.ctx.DistanceCalculator;
 			    nullValue = (enclosingInstance.ctx.IsGeo ? 180 : double.MaxValue);
 			}
 

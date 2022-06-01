@@ -20,7 +20,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using Spatial4n.Core.Shapes;
+using Spatial4n.Shapes;
 
 namespace Lucene.Net.Spatial.Prefix.Tree
 {
@@ -63,7 +63,7 @@ namespace Lucene.Net.Spatial.Prefix.Tree
 		public virtual void Reset(string newToken)
 		{
 			Debug.Assert(GetLevel() != 0);
-			shapeRel = SpatialRelation.NOT_SET;
+			shapeRel = SpatialRelation.None;
 			SetToken(newToken);
 			b_fixLeaf();
 		}
@@ -83,13 +83,13 @@ namespace Lucene.Net.Spatial.Prefix.Tree
 
 		public bool IsLeaf()
 		{
-			return shapeRel == SpatialRelation.WITHIN;
+			return shapeRel == SpatialRelation.Within;
 		}
 
 		public void SetLeaf()
 		{
 			Debug.Assert(GetLevel() != 0);
-			shapeRel = SpatialRelation.WITHIN;
+			shapeRel = SpatialRelation.Within;
 		}
 
 		/*
@@ -164,7 +164,7 @@ namespace Lucene.Net.Spatial.Prefix.Tree
 			foreach (var cell in cells)
 			{
                 SpatialRelation rel = cell.GetShape().Relate(shapeFilter);
-				if (rel == SpatialRelation.DISJOINT)
+				if (rel == SpatialRelation.Disjoint)
 					continue;
 				cell.shapeRel = rel;
 				copy.Add(cell);

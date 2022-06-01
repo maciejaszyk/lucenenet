@@ -3,11 +3,11 @@ name: tests
 on:
   push:
     branches:
-        - ravendb/v5.2
+        - ravendb/v6.0
 
   pull_request:
     branches:
-        - ravendb/v5.2
+        - ravendb/v6.0
 jobs:
   build:
     runs-on: ${{ matrix.os }}
